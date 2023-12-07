@@ -1,5 +1,5 @@
 Name:           abseil-cpp
-Version:        20230125.0
+Version:        20230802.1
 Release:        1
 Summary:        C++ Common Libraries
 
