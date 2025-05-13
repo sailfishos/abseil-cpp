@@ -1,5 +1,5 @@
 Name:           abseil-cpp
-Version:        20230802.1
+Version:        20240116.2
 Release:        1
 Summary:        C++ Common Libraries
 
@@ -14,7 +14,7 @@ Summary:        C++ Common Libraries
 #       absl/time/internal/cctz/testdata/zoneinfo/zone1970.tab
 #         # This file is in the public domain.
 License:        Apache-2.0 AND Public Domain
-URL:            https://abseil.io
+URL:            https://github.com/sailfishos/abseil-cpp
 Source0:        %{name}-%{version}.tar.gz
 BuildRequires:  cmake
 BuildRequires:  ninja
@@ -51,7 +51,8 @@ Development headers for %{name}
   -DABSL_ENABLE_INSTALL:BOOL=ON \
   -DABSL_BUILD_TESTING:BOOL=OFF \
   -DABSL_PROPAGATE_CXX_STD:BOOL=ON \
-  -DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo
+  -DCMAKE_BUILD_TYPE:STRING=RelWithDebInfo \
+  -DCMAKE_CXX_STANDARD:STRING=17
 %ninja_build
 
 %install
